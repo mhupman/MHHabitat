@@ -1,5 +1,5 @@
 # MHHabitat
-```MHHabitat``` is an library for used to determine the runtime environment of an iOS library by inspecting the ```embedded.mobileprovision``` file that the XCode toolchain includes during the application packing process.
+```MHHabitat``` is a library used to differentiate between build configurations of an iOS application at runtime.  It accomplishes this by inspecting the ```embedded.mobileprovision``` file that the XCode toolchain includes during the application packaging process.  Common use cases include runtime toggling of api server endpoints, logging verbosity, access to In-App-Purchase assets, etc.
 
 ```MHHabitat``` supports detection of the following runtime environments:
 * Development ```MHMobileProvisionTypeDebug```
@@ -7,7 +7,7 @@
 * Enterprise ```MHMobileProvisionTypeEnterprise```
 * AppStore ```MHMobileProvisionTypeAppStore```
 
-In the case ```MHHabitat``` can't find or parse the ```embedded.mobileprovision```, it will default to ```MHMobileProvisionTypeAppStore``` in order to prevent any user-facing issues.  This holds true except when compiled for iOS Simulator (```TARGET_IPHONE_SIMULATOR```), in which case a parsing failure will return ```MHMobileProvisionTypeUndetermined```.
+In the case that ```MHHabitat``` can't find or parse the ```embedded.mobileprovision``` file, it will default to ```MHMobileProvisionTypeAppStore``` in order to prevent any user-facing issues.  This holds true except when compiled for iOS Simulator (```TARGET_IPHONE_SIMULATOR```), in which case a parsing failure will return ```MHMobileProvisionTypeUndetermined```.
 
 ## Usage
 ```objc
