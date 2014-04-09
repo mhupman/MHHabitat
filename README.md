@@ -17,9 +17,9 @@ NSLog(@"Current app environment is: %@", [MHHabitat mobileProvisionTypeString]);
 // Toggle behavior based on environment
 AFHTTPRequestOperationManager *manager;
 if ([MHHabitat isAppProduction]) {
-  manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:@"http://dev.myapi.com"];
+  manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:@"http://myapi.com"];
 }
 else {
-  manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:@"https://myapi.com"];
+  manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:@"https://dev.myapi.com"];
 }
 ```
