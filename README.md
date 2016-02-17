@@ -1,5 +1,5 @@
 # MHHabitat
-```MHHabitat``` is a library used to differentiate between build configurations of an iOS application at runtime.  It accomplishes this by inspecting the ```embedded.mobileprovision``` file that the XCode toolchain includes during the application packaging process.  Common use cases include runtime toggling of api server endpoints, logging verbosity, access to In-App-Purchase assets, etc.
+```MHHabitat``` is a library used to differentiate between build configurations of an iOS application at runtime.  It accomplishes this by inspecting the ```embedded.mobileprovision``` file that the Xcode toolchain includes during the application packaging process.  Common use cases include runtime toggling of api server endpoints, logging verbosity, access to In-App-Purchase assets, etc.
 
 ```MHHabitat``` supports detection of the following runtime environments:
 * Development ```MHMobileProvisionTypeDebug```
